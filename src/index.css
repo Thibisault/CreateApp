@@ -27,6 +27,9 @@
   --color-success: 57 112 96;
   --color-warning: 140 86 34;
   --font-scale: 1;
+  --mobile-nav-height: 9.5rem;
+  --mobile-nav-offset: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom));
+  --mobile-page-bottom: calc(var(--mobile-nav-offset) + 1.5rem);
 }
 
 .dark {
@@ -47,6 +50,7 @@ html {
   scroll-behavior: smooth;
   background: rgb(var(--color-bg));
   font-size: calc(16px * var(--font-scale));
+  scroll-padding-bottom: var(--mobile-page-bottom);
 }
 
 body {
@@ -69,6 +73,10 @@ body {
 
 #root {
   min-height: 100vh;
+}
+
+main {
+  scroll-padding-bottom: var(--mobile-page-bottom);
 }
 
 a {

@@ -15,7 +15,7 @@ const navItems = [
 export function MobileNav() {
   return (
     <nav className="safe-bottom safe-left safe-right fixed bottom-0 left-0 right-0 z-30 border-t border-app-border/70 bg-app-surface/95 backdrop-blur lg:hidden">
-      <div className="grid grid-cols-4 gap-2 px-3 py-3">
+      <div className="grid min-h-[var(--mobile-nav-height)] grid-cols-4 gap-2 px-3 py-3">
         {navItems.map((item) => {
           const Icon = item.icon
           return (
