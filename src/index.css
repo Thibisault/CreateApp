@@ -1,0 +1,131 @@
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/500.css';
+@import '@fontsource/manrope/600.css';
+@import '@fontsource/manrope/700.css';
+@import '@fontsource/newsreader/500.css';
+@import '@fontsource/newsreader/600.css';
+@import '@fontsource/newsreader/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-bg: 244 239 229;
+  --color-surface: 255 252 247;
+  --color-surface-muted: 235 228 215;
+  --color-border: 196 184 166;
+  --color-ink: 28 39 47;
+  --color-muted: 89 99 106;
+  --color-accent: 20 52 54;
+  --color-accent-soft: 199 224 220;
+  --color-success: 57 112 96;
+  --color-warning: 140 86 34;
+  --font-scale: 1;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-bg: 10 21 27;
+  --color-surface: 18 31 38;
+  --color-surface-muted: 25 41 49;
+  --color-border: 62 86 96;
+  --color-ink: 238 240 235;
+  --color-muted: 164 177 182;
+  --color-accent: 125 185 174;
+  --color-accent-soft: 33 74 73;
+  --color-success: 116 190 169;
+  --color-warning: 216 171 89;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: rgb(var(--color-bg));
+  font-size: calc(16px * var(--font-scale));
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(125, 185, 174, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(244, 194, 98, 0.12), transparent 18%),
+    rgb(var(--color-bg));
+  color: rgb(var(--color-ink));
+  font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(20, 52, 54, 0.18);
+}
+
+.safe-top {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.safe-left {
+  padding-left: max(1rem, env(safe-area-inset-left));
+}
+
+.safe-right {
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(20, 52, 54, 0.38) transparent;
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(rgba(196, 184, 166, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 184, 166, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .surface-grid {
+  background-image:
+    linear-gradient(rgba(62, 86, 96, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(62, 86, 96, 0.12) 1px, transparent 1px);
+}

@@ -1,0 +1,5 @@
+export { chapitres, domaines, notions } from '@/content/academy'
+export { exercices } from '@/content/exercises'
+export { appMeta, navigationPrincipale } from '@/content/meta'
+export { routines } from '@/content/routines'
+export { blocsReference, etapesAtelier } from '@/content/workshop'
